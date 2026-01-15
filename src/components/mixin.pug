@@ -6,35 +6,35 @@ mixin createMenu(menu, active)
             a(href= value)= key 
 mixin createGallery(gallery)
     each item in gallery
-        .tile
+        .gallery__tile
           a(href= item.name + '.html')
             img(src=require('../images/'+item.img))
 mixin createVertical(gallery, flag)
     if flag
         each item in gallery
             
-            .fram
-                img.square(src=require('../images/'+item.img))
+            .square-gallery__fram
+                img.square-gallery__square(src=require('../images/'+item.img))
                 br
                 b Вулкан
                 br
                 p= item.text
     else
         each item in gallery.slice().reverse()
-            .fram
-                img.square(src=require('../images/'+item.img))
+            .square-gallery__fram
+                img.square-gallery__square(src=require('../images/'+item.img))
                 br
                 b Вулкан
                 br
                 p= item.text
                  
 mixin createArticle(article, flag)  
-    .article
-            .title
+    .articles__article
+            .article__title
               h3= article.title 
             
-            .article-content
-                .text
+            .article__content
+                .content__text
                     each par, i in article.paragraphs 
                         if i === article.paragraphs.length - 1
                             p= par
@@ -49,5 +49,20 @@ mixin volcanoInfo(name, volcanos)
     each value, key in volcanos
         if key === name
             p= value            
-    
+mixin createTable(data)
+    table(border = "1px" cellpadding = 5)
+        tr
+            th Магнитуда
+            th Населеный пункт
+            th Расстояние км.
+            th Глубина км.
+            th Дата
+        each item in data
+            tr
+                td= item.magn
+                td= item.city 
+                td= item.dist 
+                td= item.depth 
+                td= item.date 
+
     

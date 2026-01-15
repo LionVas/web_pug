@@ -17,25 +17,25 @@ back(size)
   padding-right 1px
   margin 0 auto
 
-.logo
+.head__logo
   margin-top 5px
   margin-right auto
 
-.logo img
+.head__logo img
   height 20px
   width 30px
   
-.headmenu
+.head__menu
   display flex
 
-.headmenu a
+.head__menu a
   padding 5px
   text-decoration none
   border-radius 4px
   color rgb(31, 188, 241)
-.headmenu a:hover
+.head__menu a:hover
   back(1)
-.headmenu .active
+.head__menu .active
   background-color #4dabf5
   color white
 
@@ -47,19 +47,19 @@ back(size)
   gap 5px
 .gallery img:hover
   back(1)
-.tile
+.gallery__tile
   height 180px
   width 19%
 
-.tile:nth-child(odd)
+.gallery__tile:nth-child(odd)
   margin-top 15px
 
-.tile img
+.gallery__tile img
   width 100%
   height 100%
   
 
-.square--gallery
+.square-gallery
   display flex
   flex-direction column
   margin 10px auto 0
@@ -67,13 +67,13 @@ back(size)
   gap 15px
   @media(max-width 768px)
     flex-direction row
-.square--gallery img:hover
+.square-gallery img:hover
   back(1)
-.fram
+.square-gallery__fram
   text-align center
   margin 0 15px
 
-.square
+.square-gallery__square
   width 70px
   height 70px
   border 2px solid gray
@@ -92,42 +92,42 @@ back(size)
   width 80%
   margin 0 auto
 
-.article
+.articles__article
   border 2px solid black
   margin-bottom 20px
   padding 5px
-.article img:hover
+.articles__article img:hover
   back(1)
-.article .title
+.articles__article .article__title
   margin 0 auto
   width 22%
 
-.article-content
+.article__content
   display flex
   gap 15px
   
 
-.article-content img
+.article__content img
   min-width 30%
   height 100%
 
-.text
+.content__text
   height 100%
   display flex
   gap 5px
   //text-align right
-.text a
+.content__text a
   align-self end
   
-.text p
+.content__text p
   display flex
   flex-direction column  
 
     
-.content p
+.article__content p
   margin 0 0 4px 0
 
-.article a
+.articles__article a
   text-decoration none
   padding 2px
   color white

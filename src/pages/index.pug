@@ -11,9 +11,9 @@ html(lang="ru")
   body
     .head
       
-      .logo 
+      .head__logo 
         img(src=require('../images/logo.png'))
-      .headmenu
+      .head__menu
         +createMenu(navMenu, "Главная")
         
 
@@ -23,7 +23,7 @@ html(lang="ru")
 
       .content
         
-        .square--gallery
+        .square-gallery
           +createVertical(verticalGallery, true)
             
 
@@ -31,7 +31,7 @@ html(lang="ru")
           +createArticle(articles[0],true)
           +createArticle(articles[1],false)  
 
-        .square--gallery
+        .square-gallery
           +createVertical(verticalGallery, false)
 
     hr

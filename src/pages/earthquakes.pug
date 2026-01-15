@@ -1,0 +1,119 @@
+extends template.pug
+append variables
+  - var cur = 'Землетрясения'
+block main
+  body
+
+    details
+      summary График
+      form
+        label
+          b Значение по оси X
+        br
+        input(type="radio" name="Xvalue" value="0")
+        |  Дата
+        br
+        input(type="radio" name="Xvalue" value="1")
+        |  Расстояние
+      form
+        label
+          b Значение по оси X
+        br
+        input(type="checkbox" name="Yvalue" value="0")
+        | Максимальная глубина
+        br
+        input(type="checkbox" name="Yvalue" value="1")
+        | Минимальная глубина
+        br
+        input(type="checkbox" name="Yvalue" value="2")
+        | Максимальная магнитуда
+        br
+        input(type="checkbox" name="Yvalue" value="3")
+        | Минимальная магнитуда
+        br
+      br
+      input(type="button" value="Построить")
+      br
+      | Здесь будет график
+
+    details
+      summary Фильтр
+      form
+        label Магнитуда:
+        |  от 
+        input(type="number" min="0" max="10")
+        |  до 
+        input(type="number" min="0" max="10")
+      form
+        label Расстояние от населеного пункта(км):
+        |  от 
+        input(type="number" min="0" max="500")
+        |  до 
+        input(type="number" min="0" max="500")
+      form
+        label Глубина(км):
+        |  от 
+        input(type="number" min="0" max="500")
+        |  до 
+        input(type="number" min="0" max="500")
+      form
+        label Дата:
+        |  с 
+        input(type="date")
+        |  до 
+        input(type="date")
+      form
+        label Населеный пункт
+        select(name="country")
+          option(value="0") Петропавловск-Камчатский
+          option(value="1") Северо-Курильск
+          option(value="2") Нет
+      br
+      input(type="button" value="Построить")
+
+    details
+      summary Сортировка
+      form
+        | Первый уровень:
+        select(name="language")
+          option(value="0") Магнитуда
+          option(value="1") Глубина
+          option(value="2") Расстояние
+          option(value="3") Дата
+          option(value="4") Населенный пункт
+          option(value="5" selected) Нет
+        |  по убыванию?
+        input(type="checkbox")
+      form
+        | Второй уровень:
+        select(name="language")
+          option(value="0") Магнитуда
+          option(value="1") Глубина
+          option(value="2") Расстояние
+          option(value="3") Дата
+          option(value="4") Нсселенный пункт
+          option(value="5" selected) Нет
+        |  по убыванию?
+        input(type="checkbox")
+      form
+        | Третий уровень:
+        select(name="language")
+          option(value="0") Магнитуда
+          option(value="1") Глубина
+          option(value="2") Расстояние
+          option(value="3") Дата
+          option(value="4") Населенный пункт
+          option(value="5" selected) Нет
+        |  по убыванию?
+        input(type="checkbox")
+      br
+      input(type="button" value="Сортировать")
+
+    +createTable(quakes)
+
+
+
+
+
+
+
