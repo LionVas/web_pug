@@ -55,6 +55,8 @@
   margin 10px auto 0
   text-align center
   gap 15px
+  @media(max-width 768px)
+    flex-direction row
 
 .fram
   text-align center
@@ -70,11 +72,14 @@
   margin-top 20px
   display flex
   flex-direction row
+  @media(max-width 768px)
+    flex-direction column
 
 .articles
   display flex
   flex-direction column
   width 80%
+  margin 0 auto
 
 .article
   border 2px solid black
