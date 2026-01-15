@@ -4,3 +4,47 @@ mixin createMenu(menu, active)
             a.active(href= value)= key
         else
             a(href= value)= key 
+mixin createGallery(gallery)
+    each item in gallery
+        .tile
+          a(href= item.name + '.html')
+            img(src=require('../images/'+item.img))
+mixin createVertical(gallery, flag)
+    if flag
+        each item in gallery
+            
+            .fram
+                img.square(src=require('../images/'+item.img))
+                br
+                b Вулкан
+                br
+                p= item.text
+    else
+        each item in gallery.slice().reverse()
+            .fram
+                img.square(src=require('../images/'+item.img))
+                br
+                b Вулкан
+                br
+                p= item.text
+                 
+mixin createArticle(article, flag)  
+    .article
+            .title
+              h3= article.title 
+            
+            .article-content
+                .text
+                    each par, i in article.paragraphs 
+                        if i === article.paragraphs.length - 1
+                            p= par
+                                if (flag)
+                                    a(href="#" style = "margin-right: auto") Подробнее»
+                                else
+                                    a(href="#" style = "margin-left: auto") Подробнее»
+                        else
+                            p= par
+                img(src=require("../images/avacha.jpg"))     
+            
+    
+    
