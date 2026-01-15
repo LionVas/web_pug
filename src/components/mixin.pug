@@ -1,0 +1,6 @@
+mixin createMenu(menu, active)
+    each value, key in menu
+        if active == key
+            a.active(href= value)= key
+        else
+            a(href= value)= key 

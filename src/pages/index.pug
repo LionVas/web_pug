@@ -1,9 +1,58 @@
 doctype html
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
-  body 
-    block header
-    include ../components/header
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Вулканы и землетрясения
+   
+
+  body
+    .head
+      .logo 
+        img(src=require('../images/logo.png'))
+      .headmenu
+        a.active(href="#") Главная
+        a(href="#") Землетрясения
+        a(href="#") Вулканы
+        a(href="#") Карта
+
+    .gallery
+      each i in [1,2,3,4,5]
+        .tile
+          a(href="avacha.html")
+            img(src=require('../images/avacha.jpg'))
+
+    .content
+      .square--gallery
+        each i in [1,2,3,4]
+          .fram
+            img.square(src=require("../images/kluchevskaya.jpg"))
+            br
+            b Вулкан
+            br
+            | Этот вулкан спит уже 30 лет
+
+      .articles
+        each article in [1,2]
+          .article
+            .title
+              h3 Корякский вулкан
+            .article-content
+              .text
+                p
+                  |  Авачинский вулкан — один из самых известных и часто извергающихся на Камчатке. Его высота около 2740 метров. Он заметен почти из любой точки Петропавловска, за что местные жители называют его «домашним вулканом». Авачинский активен: за последние десятилетия извержения происходили несколько раз — в 1991, 2001, 2008 и 2013 годах. Из его кратера постоянно поднимаются клубы пара и газа, а на склонах видны следы старых лавовых потоков. Подъём на вершину популярен у туристов — от подножия до кратера можно дойти за один день.
+      
+                a(href="#") Подробнее»
+              img(src=require("../images/koryak.jpg"))
+
+      .square--gallery
+        each i in [1,2,3,4]
+          .fram
+            img.square(src=require("../images/kluchevskaya.jpg"))
+            br
+            b Вулкан
+            br
+            | Этот вулкан спит уже 30 лет
+
+    hr
+    p Васильев Леонид, группа 2
