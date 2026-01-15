@@ -1,0 +1,17 @@
+include ../components/mixin.pug
+include ../components/data.pug
+block variables
+doctype html
+html(lang="ru")
+  block head
+    meta(charset="UTF-8")
+    title Вулканы и Землетрясения
+    .head
+      .logo 
+        img(src=require('../images/logo.png'))
+      .headmenu
+        +createMenu(navMenu, cur)
+    .main
+  block main 
+  hr
+  p Васильев Леонид, группа 2

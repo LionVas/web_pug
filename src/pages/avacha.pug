@@ -1,0 +1,8 @@
+extends template.pug
+append variables
+  - var cur = 'Вулканы'
+    
+block main
+    h1 Авачинский Вулкан
+    img(src=require("../images/avacha.jpg"))
+    +volcanoInfo("Авачинский вулкан", volcanos) 

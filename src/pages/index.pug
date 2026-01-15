@@ -10,31 +10,29 @@ html(lang="ru")
 
   body
     .head
+      
       .logo 
         img(src=require('../images/logo.png'))
       .headmenu
         +createMenu(navMenu, "Главная")
-        //- a.active(href="#") Главная
-        //- a(href="#") Землетрясения
-        //- a(href="#") Вулканы
-        //- a(href="#") Карта
+        
 
+    .main
+      .gallery
+        +createGallery(horizontalGallery)
 
-    .gallery
-       +createGallery(horizontalGallery)
+      .content
+        
+        .square--gallery
+          +createVertical(verticalGallery, true)
+            
 
-    .content
-      
-      .square--gallery
-        +createVertical(verticalGallery, true)
-          
+        .articles
+          +createArticle(articles[0],true)
+          +createArticle(articles[1],false)  
 
-      .articles
-        +createArticle(articles[0],true)
-        +createArticle(articles[1],false)  
-
-      .square--gallery
-        +createVertical(verticalGallery, false)
+        .square--gallery
+          +createVertical(verticalGallery, false)
 
     hr
     p Васильев Леонид, группа 2

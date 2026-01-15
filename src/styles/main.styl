@@ -1,3 +1,10 @@
+back(size)
+  
+  box-shadow 4px 5px 10px rgba(0, 0, 0, 0.4)
+  padding: size + "%"
+  margin 1% 1% 1% 1%
+
+
 .head
   display flex
   height 5%
@@ -17,6 +24,7 @@
 .logo img
   height 20px
   width 30px
+  
 .headmenu
   display flex
 
@@ -25,7 +33,8 @@
   text-decoration none
   border-radius 4px
   color rgb(31, 188, 241)
-
+.headmenu a:hover
+  back(1)
 .headmenu .active
   background-color #4dabf5
   color white
@@ -36,7 +45,8 @@
   margin 5px auto
   justify-content center
   gap 5px
-
+.gallery img:hover
+  back(1)
 .tile
   height 180px
   width 19%
@@ -57,7 +67,8 @@
   gap 15px
   @media(max-width 768px)
     flex-direction row
-
+.square--gallery img:hover
+  back(1)
 .fram
   text-align center
   margin 0 15px
@@ -85,7 +96,8 @@
   border 2px solid black
   margin-bottom 20px
   padding 5px
-
+.article img:hover
+  back(1)
 .article .title
   margin 0 auto
   width 22%

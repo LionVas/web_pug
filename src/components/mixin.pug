@@ -45,6 +45,9 @@ mixin createArticle(article, flag)
                         else
                             p= par
                 img(src=require("../images/"+article.img))     
-            
+mixin volcanoInfo(name, volcanos)
+    each value, key in volcanos
+        if key === name
+            p= value            
     
     
